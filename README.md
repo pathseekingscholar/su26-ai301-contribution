@@ -18,3 +18,17 @@ I'm interested in this specific task because:
 From studying the issue history, I see that while this is an older, highly requested documentation gap, it has recently seen active maintainer discussion and a fresh community PR open. My contribution will focus on building out an independent, comprehensive layout for these missing category docs and examples.
 
 I am tracking the project status and am ready to set up my local environment next to look at how Qiskit's Sphinx documentation builds.
+
+# Phase II: Reproduce & Plan
+
+## Reproduction Process
+
+### Environment Setup
+- **OS:** Microsoft Windows 11 Home
+- **Working Branch Link:** [fix-issue-3436](https://github.com/pathseekingscholar/qiskit/tree/fix-issue-3436)
+- **Setup Blocker Note:** Local documentation compilation via `tox -e docs` was blocked on Windows 11 due to missing native compilation tools (`rustc`, `cargo`, `make`, `doxygen`). To bypass this toolchain friction for a documentation-only contribution, my implementation phase will rely on writing the docstrings directly inside the Python modules and leveraging Qiskit's online API reference structure for styling.
+
+### Steps to Reproduce Documentation State
+1. Clone the repository fork locally and check out the tracking branch:
+   ```bash
+   git checkout fix-issue-3436
